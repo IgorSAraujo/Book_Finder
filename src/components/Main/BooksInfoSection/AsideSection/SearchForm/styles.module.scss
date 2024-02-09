@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+
+  form {
+    &::placeholder {
+      color: var(--Color-Black50);
+    }
+  }
+}

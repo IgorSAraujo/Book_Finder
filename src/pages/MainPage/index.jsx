@@ -1,17 +1,13 @@
 import styles from "./styles.module.scss"
 import { DefautTemplate } from "../../components/DefautTemplate"
-import { AsideSection } from "../../components/Main/AsideSection"
-import { BooksSection } from "../../components/Main/BooksSection"
 import { BannerSection } from "../../components/Main/BannerSection"
+import { BooksInfoSection } from "../../components/Main/BooksInfoSection"
 
 export const MainPage = () => {
   return (
     <DefautTemplate>
       <BannerSection />
-      <div>
-        <AsideSection />
-        <BooksSection />
-      </div>
+      <BooksInfoSection />
     </DefautTemplate>
   )
 }

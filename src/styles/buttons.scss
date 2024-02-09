@@ -1,6 +1,18 @@
 .btn {
   background-color: var(--Color-Blue);
+  width: fit-content;
   color: var(--Color-White);
   padding: 13.5px 1.75rem;
   cursor: pointer;
+  border: 0px;
+  border-radius: 8px;
+}
+
+.btnSearch {
+  background-color: var(--Color-Blue);
+  color: var(--Color-White);
+  padding: 13.5px 15px;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 8px;
 }

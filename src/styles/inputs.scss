@@ -1,0 +1,21 @@
+.inputSearch {
+  background-color: transparent;
+  padding: 16px 20px;
+  border: 1px solid var(--Color-Blue);
+  border-radius: 8px;
+  width: 200px;
+  &::placeholder {
+    color: var(--Color-Black50);
+  }
+}
+
+.inputPrice {
+  background-color: transparent;
+  padding: 11px 20px;
+  border: 1px solid var(--Color-Blue);
+  border-radius: 8px;
+  width: 150px;
+  &::placeholder {
+    color: var(--Color-Black50);
+  }
+}

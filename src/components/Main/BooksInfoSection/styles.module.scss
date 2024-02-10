@@ -1,5 +1,7 @@
 .booksContainer {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   padding: 30px 40px;
+  gap: 2.5rem;
 }

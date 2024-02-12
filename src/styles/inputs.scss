@@ -4,6 +4,8 @@
   border: 1px solid var(--Color-Blue);
   border-radius: 8px;
   width: 200px;
+  font-family: var(--Font-Inter);
+  font-size: var(--Font-Size-h2-p);
   &::placeholder {
     color: var(--Color-Black50);
   }
@@ -15,6 +17,8 @@
   border: 1px solid var(--Color-Blue);
   border-radius: 8px;
   width: 150px;
+  font-family: var(--Font-Inter);
+  font-size: var(--Font-Size-h2-p);
   &::placeholder {
     color: var(--Color-Black50);
   }

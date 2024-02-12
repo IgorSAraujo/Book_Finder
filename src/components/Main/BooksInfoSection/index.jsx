@@ -9,6 +9,7 @@ export const BooksInfoSection = () => {
   const [category, setCategory] = useState("")
   const [min, setMin] = useState("")
   const [max, setMax] = useState("")
+  const [selected, setSelected] = useState("")
 
   const bookFinder = books.filter((book) => {
     const searchFilter =
@@ -30,6 +31,7 @@ export const BooksInfoSection = () => {
     setCategory("")
     setMin("")
     setMax("")
+    setSelected("")
   }
 
   return (
@@ -42,6 +44,8 @@ export const BooksInfoSection = () => {
         setMin={setMin}
         max={max}
         setMax={setMax}
+        selected={selected}
+        setSelected={setSelected}
       />
       <BooksSection search={search} bookList={bookFinder} />
     </div>

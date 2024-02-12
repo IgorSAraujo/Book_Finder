@@ -10,5 +10,15 @@
     flex-direction: column;
     gap: 0.625rem;
     cursor: pointer;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+
+      .categoryName {
+        width: 100%;
+      }
+    }
   }
 }

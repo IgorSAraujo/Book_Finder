@@ -23,6 +23,8 @@
       align-items: center;
 
       .card {
+        position: relative;
+        left: -1000px;
         width: 320px;
         padding: 40px 20px;
         display: flex;

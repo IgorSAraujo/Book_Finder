@@ -1,0 +1,32 @@
+.menuContainer {
+  display: none;
+}
+
+@media (width<=576px) {
+  .menuContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .menuOpen {
+    z-index: 2;
+    animation: rotateAnimation 0.5s ease-in-out;
+  }
+
+  .menuClosed {
+    animation: rotateAnimation 0.5s ease-in-out;
+  }
+
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

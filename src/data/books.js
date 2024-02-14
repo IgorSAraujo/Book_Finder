@@ -1,32 +1,26 @@
-export const books = [
-    {
-        id: 0,
-        name: "A Chama Esquecida",
-        category: "Fantasia",
-        price: 32.90,
-    },
-    {
-        id: 1,
-        name: "Sombras do Destino",
-        category: "Ação",
-        price: 45.50,
-    },
-    {
-        id: 2,
-        name: "O Labirinto dos Sonhos",
-        category: "Fantasia",
-        price: 28.70,
-    },
-    {
-        id: 3,
-        name: "O Último Suspiro",
-        category: "Romance",
-        price: 19.99,
-    },
-    {
-        id: 4,
-        name: "Entre o Tempo e a Eternidade",
-        category: "Romance",
-        price: 37.80,
-    }
-]
+export const apiUrl = "https://www.googleapis.com/books/v1/volumes?q=quilting"
+
+export const booksApi = await fetch(
+  "https://www.googleapis.com/books/v1/volumes?q=random&filter=paid-ebooks&maxResults=12",
+  {
+    method: "GET",
+    headers: { "content-type": "application/json" },
+  }
+)
+  .then((api) => api.json())
+  .then((booksApi) => {
+    return booksApi.items
+  })
+
+export const books = booksApi.map((book) => {
+  const price =
+    book.saleInfo && book.saleInfo.listPrice
+      ? book.saleInfo.listPrice.amount
+      : "Preço não disponivel"
+  return {
+    id: book.id,
+    name: book.volumeInfo.title,
+    category: book.volumeInfo.categories,
+    price: price,
+  }
+})

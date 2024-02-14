@@ -18,7 +18,8 @@ export const BooksInfoSection = () => {
         : book.name.toLowerCase().includes(search.toLowerCase()) ||
           book.category.toLowerCase().includes(search.toLowerCase())
 
-    const categoryFilter = category === "" ? true : book.category === category
+    const categoryFilter =
+      category === "" ? true : book.category && book.category.includes(category)
 
     const minPriceFilter = min === "" ? true : book.price >= Number(min)
     const maxPriceFilter = max === "" ? true : book.price <= Number(max)

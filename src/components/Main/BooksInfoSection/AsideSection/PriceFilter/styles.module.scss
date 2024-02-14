@@ -1,0 +1,11 @@
+@media (width<=576px) {
+  .container {
+    width: 100%;
+  }
+  .containerInputs {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

@@ -9,3 +9,13 @@
     }
   }
 }
+
+@media (width<=576px) {
+  .container {
+    width: 100%;
+    justify-content: center;
+    input {
+      width: 70%;
+    }
+  }
+}

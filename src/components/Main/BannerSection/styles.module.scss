@@ -4,3 +4,10 @@
   background-color: var(--Color-Blue);
   padding: 51px 40px;
 }
+
+@media (width <= 576px) {
+  .container {
+    display: flex;
+    text-align: center;
+  }
+}

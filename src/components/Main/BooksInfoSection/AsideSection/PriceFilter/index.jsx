@@ -6,10 +6,24 @@ export const PriceFilter = ({ min, setMin, max, setMax }) => {
   const [value, setValue] = useState("")
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2 className="titleH2">Filtrar por preço</h2>
-      <PriceInput id="min" label="Mínimo (R$)" value={min} setValue={setMin} />
-      <PriceInput id="max" label="Maximo (R$)" value={max} setValue={setMax} />
+      <div className={styles.containerInputs}>
+        <PriceInput
+          className={styles.priceInput}
+          id="min"
+          label="Mínimo (R$)"
+          value={min}
+          setValue={setMin}
+        />
+        <PriceInput
+          className={styles.priceInput}
+          id="max"
+          label="Maximo (R$)"
+          value={max}
+          setValue={setMax}
+        />
+      </div>
     </div>
   )
 }

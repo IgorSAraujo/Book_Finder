@@ -1,5 +1,33 @@
 .container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 1.5625rem;
+  padding-left: clamp(1.25rem, 0.417rem + 2.315vw, 2.5rem);
+  background-color: var(--Color-White);
+  z-index: 1;
+}
+
+@media (width<=576px) {
+  .container {
+    width: 100%;
+  }
+  .menuDesktop {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    left: -576px;
+    margin-top: 40px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    transition: 1s ease-in-out;
+  }
+  .menuDesktopOpen {
+    left: 0px;
+    transition: 0.5s ease-in-out;
+  }
 }

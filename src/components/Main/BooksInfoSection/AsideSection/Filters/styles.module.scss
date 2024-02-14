@@ -1,4 +1,5 @@
 .container {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,10 +15,34 @@
     li {
       display: flex;
       flex-direction: row;
-      width: 40%;
+      width: 100%;
 
       .categoryName {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (width<=576px) {
+  .container {
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
+
+    .containerFilters {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        .categoryName {
+          width: 60%;
+        }
       }
     }
   }

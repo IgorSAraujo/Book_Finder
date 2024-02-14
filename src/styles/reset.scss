@@ -124,5 +124,13 @@ table {
 }
 
 input {
-  all: unset;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: middle;
+  background: transparent;
+  box-sizing: border-box;
 }

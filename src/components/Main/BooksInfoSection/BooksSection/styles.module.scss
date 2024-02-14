@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: clamp(0.938rem, -0.104rem + 2.894vw, 2.5rem);
 
   .containerTitle {
     width: 100%;
@@ -26,13 +26,30 @@
         position: relative;
         left: -1000px;
         width: 320px;
+        height: 70px;
         padding: 40px 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         border-left: 4px solid var(--Color-Blue);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.43);
       }
+    }
+  }
+}
+
+@media (width <=576px) {
+  .container {
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .containerBookList {
+    ul {
+      align-items: center;
+      justify-content: center;
     }
   }
 }

@@ -63,7 +63,8 @@ export const BooksInfoSection = () => {
       search === ""
         ? true
         : book.name.toLowerCase().includes(search.toLowerCase()) ||
-          book.category.toLowerCase().includes(search.toLowerCase())
+          (typeof book.category === "string" &&
+            book.category.toLowerCase().includes(search.toLowerCase()))
 
     const categoryFilter =
       category === "" ? true : book.category && book.category.includes(category)

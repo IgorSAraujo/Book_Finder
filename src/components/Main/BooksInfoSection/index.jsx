@@ -37,6 +37,27 @@ export const BooksInfoSection = () => {
     }
   })
 
+  const newCategories = () => {
+    const allCategories = book.reduce((categories, book) => {
+      if (book.volumeInfo && book.volumeInfo.categories) {
+        categories.push(...book.volumeInfo.categories)
+      }
+      return categories
+    }, [])
+
+    const categoriesFilter = Array.from(new Set(allCategories))
+
+    // Criação um array de objetos com categorias únicas
+    const finalCategories = categoriesFilter.map((category, index) => ({
+      id: index + 1,
+      name: category,
+    }))
+
+    return finalCategories
+  }
+
+  const categories = newCategories()
+
   const bookFinder = newBooks.filter((book) => {
     const searchFilter =
       search === ""
@@ -73,6 +94,7 @@ export const BooksInfoSection = () => {
         setMax={setMax}
         selected={selected}
         setSelected={setSelected}
+        categories={categories}
       />
       <BooksSection search={search} bookList={bookFinder} />
     </div>

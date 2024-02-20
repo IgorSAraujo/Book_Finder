@@ -15,6 +15,7 @@ export const AsideSection = ({
   setMax,
   selected,
   setSelected,
+  categories,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState(false)
@@ -48,6 +49,7 @@ export const AsideSection = ({
             cleanFilters={cleanFilters}
             selected={selected}
             setSelected={setSelected}
+            categories={categories}
           />
           <PriceFilter min={min} setMin={setMin} max={max} setMax={setMax} />
         </div>

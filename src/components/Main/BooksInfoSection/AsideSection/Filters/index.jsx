@@ -1,6 +1,4 @@
 import styles from "./styles.module.scss"
-import { useState } from "react"
-import { categories } from "../../../../../data/category.js"
 import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md"
 import { MdOutlineCheckBox } from "react-icons/md"
 
@@ -9,6 +7,7 @@ export const Filters = ({
   selected,
   setSelected,
   cleanFilters,
+  categories,
 }) => {
   return (
     <div className={styles.container}>

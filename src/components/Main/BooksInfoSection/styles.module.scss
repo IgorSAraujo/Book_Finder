@@ -3,11 +3,17 @@
   width: 100%;
   display: flex;
   padding: clamp(1.25rem, -0.417rem + 4.63vw, 3.75rem)
-    clamp(1.25rem, 0.417rem + 2.315vw, 2.5rem)
+    clamp(1.25rem, 0.833rem + 1.157vw, 1.875rem)
     clamp(1.25rem, -0.417rem + 4.63vw, 3.75rem) 0px;
   gap: clamp(0.625rem, -0.625rem + 3.472vw, 2.5rem);
 }
 
+@media (width<=768px) {
+  .booksContainer {
+    flex-direction: column;
+    min-height: 80vh;
+  }
+}
 @media (width<=576px) {
   .booksContainer {
     flex-direction: column;

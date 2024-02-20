@@ -15,7 +15,7 @@
   gap: clamp(1.563rem, 0.938rem + 1.736vw, 2.5rem);
 }
 
-@media (width<=576px) {
+@media (width<=768px) {
   .container {
     width: 100%;
   }
@@ -23,6 +23,26 @@
     position: absolute;
     z-index: 1;
     left: -576px;
+    margin-top: 40px;
+    width: 52%;
+    background-color: white;
+    padding: 20px;
+    transition: 1s ease-in-out;
+    border-bottom: 5px solid var(--Color-Blue);
+  }
+  .menuDesktopOpen {
+    left: 0px;
+    transition: 0.5s ease-in-out;
+  }
+}
+@media (width<=576px) {
+  .container {
+    width: 100%;
+  }
+  .menuDesktop {
+    position: absolute;
+    z-index: 1;
+    left: -768px;
     margin-top: 40px;
     width: 100%;
     background-color: white;

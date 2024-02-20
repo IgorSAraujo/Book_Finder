@@ -7,7 +7,7 @@ export const BooksSection = ({ search, bookList }) => {
     anime({
       targets: ".card",
       translateX: 1000,
-      delay: anime.stagger(50, { from: "first" }), // increase delay by 100ms for each elements.
+      delay: anime.stagger(50, { from: "first" }),
     })
   })
 

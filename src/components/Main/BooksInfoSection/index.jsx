@@ -1,8 +1,8 @@
 import styles from "./styles.module.scss"
-import { useState } from "react"
-import { books } from "../../../data/books.js"
+import { useEffect, useState } from "react"
 import { AsideSection } from "./AsideSection"
 import { BooksSection } from "./BooksSection"
+import { bookApi } from "../../../services/booksApi.js"
 
 export const BooksInfoSection = () => {
   const [search, setSearch] = useState("")
@@ -10,8 +10,34 @@ export const BooksInfoSection = () => {
   const [min, setMin] = useState("")
   const [max, setMax] = useState("")
   const [selected, setSelected] = useState("")
+  const [book, setBook] = useState([])
 
-  const bookFinder = books.filter((book) => {
+  const getBooks = async () => {
+    const { data } = await bookApi.get(
+      "/books/v1/volumes?q=random&filter=paid-ebooks&maxResults=12"
+    )
+
+    setBook(data.items)
+  }
+
+  useEffect(() => {
+    getBooks()
+  }, [])
+
+  const newBooks = book.map((book) => {
+    const price =
+      book.saleInfo && book.saleInfo.listPrice
+        ? book.saleInfo.listPrice.amount
+        : "Preço não disponivel"
+    return {
+      id: book.id,
+      name: book.volumeInfo.title,
+      category: book.volumeInfo.categories,
+      price: price,
+    }
+  })
+
+  const bookFinder = newBooks.filter((book) => {
     const searchFilter =
       search === ""
         ? true

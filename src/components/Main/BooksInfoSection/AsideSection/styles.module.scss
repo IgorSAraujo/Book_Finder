@@ -8,15 +8,18 @@
   z-index: 1;
 }
 
+.menuDesktop {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: clamp(1.563rem, 0.938rem + 1.736vw, 2.5rem);
+}
+
 @media (width<=576px) {
   .container {
     width: 100%;
   }
   .menuDesktop {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5625rem;
-    box-sizing: border-box;
     position: absolute;
     z-index: 1;
     left: -576px;
@@ -25,6 +28,8 @@
     background-color: white;
     padding: 20px;
     transition: 1s ease-in-out;
+    align-items: center;
+    border-bottom: 5px solid var(--Color-Blue);
   }
   .menuDesktopOpen {
     left: 0px;
